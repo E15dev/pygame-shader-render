@@ -8,7 +8,7 @@ render easy shaders ('procedural images'), (assets/testshader.py)
 #### def shader(x, y, z):
 ####     return (random.randint(0,255), random.randint(0,255), random.randint(0,255))
 
-render random color for all pixels
+* render random color for all pixels
 
 ## gradient
 #### from math import floor
@@ -16,7 +16,7 @@ render random color for all pixels
 #### def shader(x, y, z):
 ####     return (floor((x  + 100) / 2), floor((y  + 100) / 2), 127)
 
-render easy gradient (work only on -100 to 100 render)
+* render easy gradient (work only on -100 to 100 render)
 
 # features
 * auto set fps in name.
