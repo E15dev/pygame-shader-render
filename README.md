@@ -11,7 +11,7 @@ render easy shaders ('procedural images'), (assets/testshader.py)
 render random color for all pixels
 
 ## gradient
-####from math import floor
+#### from math import floor
 
 #### def shader(x, y, z):
 ####     return (floor((x  + 100) / 2), floor((y  + 100) / 2), 127)
