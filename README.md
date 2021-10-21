@@ -18,7 +18,7 @@ render random color for all pixels
 
 render easy gradient (work only on -100 to 100 render)
 
-#features
-auto set fps in name.
-good to learns how procedural textures/images work.
-fast.
+# features
+* auto set fps in name.
+* good to learns how procedural textures/images work.
+* fast.
