@@ -6,7 +6,6 @@ render easy shaders ('procedural images'), (assets/testshader.py)
 import random
 
 def shader(x, y, z):
-    # return (255, 255, 255)
     return (random.randint(0,255), random.randint(0,255), random.randint(0,255))
 
 render random color for all pixels
