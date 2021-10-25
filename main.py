@@ -14,15 +14,23 @@ def pixel(surface, color, pos):
     pygame.draw.line(surface, color, pos, pos)
     return 0
 
+def clamp(fl):
+    if fl < 0:
+        return 0
+    elif fl > 255:
+        return 255
+    else:
+        return fl
 
 def drawshader():
     for i in range(centerwidth - 100, centerwidth + 100):
         for j in range(centerheight - 100, centerheight + 100):
-            pixel(screen, shader(i, j, 0), (i, j))
+            sh = shader(i, j, 0)
+            pixel(screen, (clamp(sh[0]), clamp(sh[1]), clamp(sh[2])), (i, j))
 
 
 def setwindowfps(fps):
-    pygame.display.set_caption('The game ' + str(fps) + ' fps')
+    pygame.display.set_caption('pygame render ' + str(fps) + ' fps')
 
 
 # config
