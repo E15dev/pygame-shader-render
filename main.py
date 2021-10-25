@@ -25,7 +25,7 @@ def clamp(fl):
 def drawshader():
     for i in range(centerwidth - 100, centerwidth + 100):
         for j in range(centerheight - 100, centerheight + 100):
-            sh = shader(i, j, 0)
+            sh = shader(i, j, 0, cw=centerwidth, ch=centerheight)
             pixel(screen, (clamp(sh[0]), clamp(sh[1]), clamp(sh[2])), (i, j))
 
 
