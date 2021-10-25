@@ -1,8 +1,8 @@
 import math
 
 
-def shader(x, y, z):
-    color = (dist2d(250, 250, x, y) < 75) * 255  # '255' is center of the screen
+def shader(x, y, z, cw=0, ch=0):
+    color = (dist2d(cw, ch, x, y) < 75) * 255
     print(dist2d(0, 0, x, y))
     return (color, color, color)
 
