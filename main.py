@@ -56,14 +56,13 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-
-    drawshader()  # prerendering shader
+    try:
+        fps = 1 / (time.time() - lfps)
+    except:
+        fps = "error"
+    set_window_fps(fps)
+    lfps = time.time()
+    draw_shader()  # pre-rendering shader
     refresh()  # swap buffer to screen
-    framestime.append(time.time())  # adding frame time data
-    # deleting frame data older than second
-    if framestime[0] + 1 < time.time():
-        framestime.remove(framestime[0])
-    # print(str(iteration) + ' ' + str(len(framestime)))
-    setwindowfps(len(framestime))
 
 print('end')
