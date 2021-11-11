@@ -60,9 +60,9 @@ while running:
         fps = 1 / (time.time() - lfps)
     except:
         fps = "error"
-    set_window_fps(fps)
+    setwindowfps(fps)
     lfps = time.time()
-    draw_shader()  # pre-rendering shader
+    drawshader()  # pre-rendering shader
     refresh()  # swap buffer to screen
 
 print('end')
